@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 
-namespace InvestmentCalculator.Controllers
+namespace Investment.Controllers
 {
     public class HomeController : Controller
     {
@@ -25,6 +28,23 @@ namespace InvestmentCalculator.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
+        }
+
+        public ActionResult ChangeLanguage(string Language)
+        {
+            if (Language != null && Language != "")
+            {
+                Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture(Language);
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo(Language);
+
+                 HttpCookie cookie = new HttpCookie("Language")
+                {
+                    Value = Language
+                };
+                 Response.Cookies.Add(cookie);
+            }
+
+            return View("Index");
         }
     }
 }
