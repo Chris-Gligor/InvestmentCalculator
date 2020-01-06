@@ -11,9 +11,12 @@ namespace Investment.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        public ActionResult Index(string Language)
         {
-            return View();
+            if (Language != null && Language != "")
+                return View();
+            else
+                return RedirectToAction("ChangeLanguage", new { Language = "en" });
         }
 
         public ActionResult About()
