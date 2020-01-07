@@ -9,7 +9,8 @@ function CalculateNetGain(Result, Tax) {
     $("#Net").val(Net);
 }
 
-function CalculateTax(Result) {
+function CalculateTax() {
+    var Result = Number($("#Result").val())
     var Tax = 0;
     var PercTax = Number($("#PercTax").val());
     if (Result > 0) Tax = (Result * PercTax / 100).toFixed(2);
@@ -20,7 +21,7 @@ function CalculateTax(Result) {
 function CalculateResult(TotalBuy, TotalSell) {
     var Result = (TotalSell - TotalBuy).toFixed(2);
     $("#Result").val(Result);
-    CalculateTax(Result);
+    CalculateTax();
 }
 
 function SetPercTOBBuy(Value) {

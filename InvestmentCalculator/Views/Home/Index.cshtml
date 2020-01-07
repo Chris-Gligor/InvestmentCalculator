@@ -2,25 +2,25 @@
 @{
     ViewBag.Title = "Home Page"; ;
 }
-<head>
-    
-</head>
-<br />
-<br />
-<h2>@InvestmentCalculator.Resources.Home.Shares</h2>
-<br />
 
-<div class="Zone">
-    <label class="label">Type</label>
-    <select id="Type" onchange="TypeChanged()">
-        <option value="1">@InvestmentCalculator.Resources.Home.Actions</option>
-        <option value="2">@InvestmentCalculator.Resources.Home.Sicav</option>
-    </select>
-</div>
+<div id="Content" class="center row">
 
-<div class="center row">
+    <div class="col-sm-12" style="display:none">
+        <br />
 
-    <div class="col-sm-6">
+        <h3>@InvestmentCalculator.Resources.Home.Shares</h3>
+        <div class="Zone">
+            <label class="label">Type</label>
+            <select id="Type" onchange="TypeChanged()">
+                <option value="1">@InvestmentCalculator.Resources.Home.Actions</option>
+                <option value="2">@InvestmentCalculator.Resources.Home.Sicav</option>
+            </select>
+        </div>
+
+    </div>
+
+    <div class="col-sm">
+        <br />
         <h3>@InvestmentCalculator.Resources.Home.Buy</h3>
         <div class="Zone">
             <label class="label">@InvestmentCalculator.Resources.Home.Quantity</label>
@@ -45,19 +45,20 @@
         <div class="Zone">
             <label class="label">@InvestmentCalculator.Resources.Home.TotalCost</label>
             <input type="text" id="ResultBuy" class="input" value="0" disabled />
-            <label class="SelectedCurrency">€</label>
+
         </div>
 
     </div>
-    <div class="col-sm-6">
+    <div class="col-sm">
+        <br />
         <h3>@InvestmentCalculator.Resources.Home.Sell</h3>
         <div class="Zone">
             <label class="label">@InvestmentCalculator.Resources.Home.Quantity</label>
-            <input type="text" id="SharesSell" class="input" value="0" oninput="CalculateSell()" onkeypress='validate(event)'/>
+            <input type="text" id="SharesSell" class="input" value="0" oninput="CalculateSell()" onkeypress='validate(event)' />
         </div>
         <div class="Zone">
             <label class="label">@InvestmentCalculator.Resources.Home.SellPrice</label>
-            <input type="text" id="PriceSell" class="input" value="0" oninput="CalculateSell()" onkeypress='validate(event)'/>
+            <input type="text" id="PriceSell" class="input" value="0" oninput="CalculateSell()" onkeypress='validate(event)' />
         </div>
         <div class="Zone">
             <label class="label">@InvestmentCalculator.Resources.Home.TOB</label>
@@ -66,7 +67,7 @@
         </div>
         <div class="Zone">
             <label class="label">@InvestmentCalculator.Resources.Home.Commision</label>
-            <input type="text" id="CommissionSell" class="input" value="0" oninput="CalculateSell()" onkeypress='validate(event)'/>
+            <input type="text" id="CommissionSell" class="input" value="0" oninput="CalculateSell()" onkeypress='validate(event)' />
         </div>
 
         <br />
@@ -74,11 +75,11 @@
         <div class="Zone">
             <label class="label">@InvestmentCalculator.Resources.Home.Result</label>
             <input type="text" id="ResultSell" class="input" value="0" disabled />
-            <label class="SelectedCurrency">€</label>
+
         </div>
     </div>
 
-    <div class="col-sm-6">
+    <div class="col-sm">
         <br />
         <br />
 
@@ -87,21 +88,19 @@
             <label class="label">@InvestmentCalculator.Resources.Home.FinalResult</label>
             <input type="text" id="Result" class="input" value="0" disabled />
         </div>
-        <div id="SicavTax" class="Zone" style="display:none">
+        <div id="SicavTax" >
             <div class="Zone Tax">
                 <label class="label">@InvestmentCalculator.Resources.Home.Tax</label>
-                <input type="number" step="any" id="PercTax" class="input-left" value="30" onchange="CalculateTax()" onkeypress='validate(event)'/>
+                <input type="number" step="any" id="PercTax" class="input-left" value="30" onchange="CalculateTax()" onkeypress='validate(event)' />
                 <input type="text" id="Tax" class="input-right" value="0" disabled />
             </div>
             <div class="Zone Tax">
                 <label class="label">@InvestmentCalculator.Resources.Home.Net</label>
                 <input type="text" id="Net" class="input" value="0" disabled />
-                <label class="SelectedCurrency">€</label>
+
             </div>
         </div>
-        
-       
-        
+        <br />
     </div>
 </div>
 

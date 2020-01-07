@@ -13,10 +13,13 @@ namespace Investment.Controllers
     {
         public ActionResult Index(string Language)
         {
-            if (Language != null && Language != "")
-                return View();
-            else
-                return RedirectToAction("ChangeLanguage", new { Language = "en" });
+            if (Language == null || Language == "")
+                Language = "en";
+
+            if (HttpContext.Request.Cookies["Language"].Value != Language)
+                ChangeLanguage(Language);
+
+            return View();
         }
 
         public ActionResult About()
@@ -33,21 +36,36 @@ namespace Investment.Controllers
             return View();
         }
 
-        public ActionResult ChangeLanguage(string Language)
+        //public ActionResult ChangeLanguage(string Language)
+        //{
+        //    if (Language != null && Language != "")
+        //    {
+        //        Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture(Language);
+        //        Thread.CurrentThread.CurrentUICulture = new CultureInfo(Language);
+
+        //         HttpCookie cookie = new HttpCookie("Language")
+        //        {
+        //            Value = Language
+        //        };
+        //         Response.Cookies.Add(cookie);
+        //    }
+
+        //    return View("Index");
+        //}
+
+        private void ChangeLanguage(string Language)
         {
             if (Language != null && Language != "")
             {
                 Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture(Language);
                 Thread.CurrentThread.CurrentUICulture = new CultureInfo(Language);
 
-                 HttpCookie cookie = new HttpCookie("Language")
+                HttpCookie cookie = new HttpCookie("Language")
                 {
                     Value = Language
                 };
-                 Response.Cookies.Add(cookie);
+                Response.Cookies.Add(cookie);
             }
-
-            return View("Index");
         }
     }
 }
