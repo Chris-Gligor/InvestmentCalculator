@@ -16,7 +16,8 @@ namespace Investment.Controllers
             if (Language == null || Language == "")
                 Language = "en";
 
-            if (HttpContext.Request.Cookies["Language"].Value != Language)
+
+            if (HttpContext.Request.Cookies["Language"] == null || HttpContext.Request.Cookies["Language"].Value != Language)
                 ChangeLanguage(Language);
 
             return View();

@@ -160,9 +160,21 @@
     <value>Tax (%)</value>
   </data>
   <data name="TOB" xml:space="preserve">
-    <value>TOB (%)</value>
+    <value>S.T.F. (%)</value>
   </data>
   <data name="TotalCost" xml:space="preserve">
     <value>Total Cost</value>
+  </data>
+  <data name="English" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="French" xml:space="preserve">
+    <value>French</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="TOBTT" xml:space="preserve">
+    <value>Stock Trading Fee</value>
   </data>
 </root>

@@ -29,11 +29,11 @@
                 <ul class="navbar-nav flex-grow-2">
                     <li class="nav-item dropdown " style="background-color:white;">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Language
+                            @InvestmentCalculator.Resources.Home.Language
                         </a>
                         <div class="dropdown-menu " aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item " href="@Url.Action("Index","Home", new { Language = "en" })">English</a>
-                            <a class="dropdown-item " href="@Url.Action("Index","Home", new { Language = "fr" })">French</a>
+                            <a class="dropdown-item " href="@Url.Action("Index","Home", new { Language = "en" })">@InvestmentCalculator.Resources.Home.English</a>
+                            <a class="dropdown-item " href="@Url.Action("Index","Home", new { Language = "fr" })">@InvestmentCalculator.Resources.Home.French</a>
                         </div>
                     </li>
 

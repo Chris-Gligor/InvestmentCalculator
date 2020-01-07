@@ -97,11 +97,38 @@ namespace InvestmentCalculator.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to English.
+        /// </summary>
+        public static string English {
+            get {
+                return ResourceManager.GetString("English", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Final Result.
         /// </summary>
         public static string FinalResult {
             get {
                 return ResourceManager.GetString("FinalResult", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to French.
+        /// </summary>
+        public static string French {
+            get {
+                return ResourceManager.GetString("French", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Language.
+        /// </summary>
+        public static string Language {
+            get {
+                return ResourceManager.GetString("Language", resourceCulture);
             }
         }
         
@@ -187,11 +214,20 @@ namespace InvestmentCalculator.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to TOB (%).
+        ///   Looks up a localized string similar to S.T.F. (%).
         /// </summary>
         public static string TOB {
             get {
                 return ResourceManager.GetString("TOB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Stock Trading Fee.
+        /// </summary>
+        public static string TOBTT {
+            get {
+                return ResourceManager.GetString("TOBTT", resourceCulture);
             }
         }
         

@@ -31,8 +31,8 @@
             <input type="text" id="PriceBuy" class="input" value="0" oninput="CalculateBuy()" onkeypress='validate(event)' />
         </div>
         <div class="Zone">
-            <label class="label">@InvestmentCalculator.Resources.Home.TOB</label>
-            <input type="number" step="any" class="input-left" id="PercTOBBuy" value="0.35" oninput="CalculateBuy()" onkeypress='validate(event)' />
+            <label class="label" data-toggle="tooltip" title="@InvestmentCalculator.Resources.Home.TOBTT">@InvestmentCalculator.Resources.Home.TOB</label>
+            <input type="number" step="any" class="input-left" id="PercTOBBuy" value="0.35" oninput="CalculateBuy()" onkeypress='validate(event)' data-toggle="tooltip" title="@InvestmentCalculator.Resources.Home.TOBTT"/>
             <input type="text" class="input-right" id="TOBBuy" value="0" disabled />
         </div>
         <div class="Zone">
@@ -61,8 +61,8 @@
             <input type="text" id="PriceSell" class="input" value="0" oninput="CalculateSell()" onkeypress='validate(event)' />
         </div>
         <div class="Zone">
-            <label class="label">@InvestmentCalculator.Resources.Home.TOB</label>
-            <input type="number" step="any" class="input-left" id="PercTOBSell" value="0.35" oninput="CalculateSell()" onkeypress='validate(event)' />
+            <label class="label" data-toggle="tooltip" title="@InvestmentCalculator.Resources.Home.TOBTT">@InvestmentCalculator.Resources.Home.TOB</label>
+            <input type="number" step="any" class="input-left" id="PercTOBSell" value="0.35" oninput="CalculateSell()" onkeypress='validate(event)' data-toggle="tooltip" title="@InvestmentCalculator.Resources.Home.TOBTT"/>
             <input type="text" class="input-right" id="TOBSell" value="0" disabled />
         </div>
         <div class="Zone">

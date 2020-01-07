@@ -157,12 +157,24 @@
     <value>Sicav</value>
   </data>
   <data name="Tax" xml:space="preserve">
-    <value>Tax (%)</value>
+    <value>Taxe (%)</value>
   </data>
   <data name="TOB" xml:space="preserve">
-    <value>TOB (%)</value>
+    <value>T.O.B. (%)</value>
   </data>
   <data name="TotalCost" xml:space="preserve">
-    <value>Côut d'achat</value>
+    <value>Coût d'achat</value>
+  </data>
+  <data name="English" xml:space="preserve">
+    <value>Anglais</value>
+  </data>
+  <data name="French" xml:space="preserve">
+    <value>Français</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Langue</value>
+  </data>
+  <data name="TOBTT" xml:space="preserve">
+    <value>Taxe sur les opérations boursières</value>
   </data>
 </root>
