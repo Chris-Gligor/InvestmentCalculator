@@ -13,10 +13,18 @@
               crossorigin="anonymous"
               integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" />
     </environment>
+
     
 </head>
 <body>
-
+    @{ 
+        string Language = "en";
+        
+        if (Request.QueryString["Language"] != null)
+        {
+            Language = Request.QueryString["Language"].ToString();
+        }
+    }
 
     <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3">
         <div class="container">
@@ -25,6 +33,7 @@
                     aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+       
             <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                 <ul class="navbar-nav flex-grow-2">
                     <li class="nav-item dropdown " style="background-color:white;">
@@ -32,8 +41,8 @@
                             @InvestmentCalculator.Resources.Home.Language
                         </a>
                         <div class="dropdown-menu " aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item " href="@Url.Action("Index","Home", new { Language = "en" })">@InvestmentCalculator.Resources.Home.English</a>
-                            <a class="dropdown-item " href="@Url.Action("Index","Home", new { Language = "fr" })">@InvestmentCalculator.Resources.Home.French</a>
+                            <a class="dropdown-item @(Language == "en" ? " active" : "")" href="@Url.Action("Index","Home", new { Language = "en" })"> <img src="~/Images/USA-Flag.png"/> @InvestmentCalculator.Resources.Home.English</a>
+                            <a class="dropdown-item @(Language == "fr" ? "active" : "")" href="@Url.Action("Index","Home", new { Language = "fr" })"> <img src="~/Images/France-Flag.png" /> @InvestmentCalculator.Resources.Home.French</a>
                         </div>
                     </li>
 
