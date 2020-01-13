@@ -126,8 +126,8 @@
   <data name="CapitalGain" xml:space="preserve">
     <value>Capital Gain</value>
   </data>
-  <data name="Commision" xml:space="preserve">
-    <value>Commision</value>
+  <data name="Commission" xml:space="preserve">
+    <value>Commission</value>
   </data>
   <data name="FinalResult" xml:space="preserve">
     <value>Final Result</value>

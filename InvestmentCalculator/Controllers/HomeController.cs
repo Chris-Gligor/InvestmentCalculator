@@ -68,5 +68,6 @@ namespace Investment.Controllers
                 Response.Cookies.Add(cookie);
             }
         }
+
     }
 }

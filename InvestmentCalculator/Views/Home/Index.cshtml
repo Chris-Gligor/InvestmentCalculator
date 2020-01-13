@@ -32,11 +32,11 @@
         </div>
         <div class="Zone">
             <label class="label" data-toggle="tooltip" title="@InvestmentCalculator.Resources.Home.TOBTT">@InvestmentCalculator.Resources.Home.TOB</label>
-            <input type="number" step="any" class="input-left" id="PercTOBBuy" value="0.35" oninput="CalculateBuy()" onkeypress='validate(event)' data-toggle="tooltip" title="@InvestmentCalculator.Resources.Home.TOBTT"/>
+            <input type="number" step="any" class="input-left" id="PercTOBBuy" value="0.35" oninput="CalculateBuy()" onkeypress='validate(event)' data-toggle="tooltip" title="@InvestmentCalculator.Resources.Home.TOBTT" />
             <input type="text" class="input-right" id="TOBBuy" value="0" disabled />
         </div>
         <div class="Zone">
-            <label class="label">@InvestmentCalculator.Resources.Home.Commision</label>
+            <label class="label">@InvestmentCalculator.Resources.Home.Commission</label>
             <input type="text" id="CommissionBuy" class="input" value="0" oninput="CalculateBuy()" onkeypress='validate(event)' />
         </div>
 
@@ -62,11 +62,11 @@
         </div>
         <div class="Zone">
             <label class="label" data-toggle="tooltip" title="@InvestmentCalculator.Resources.Home.TOBTT">@InvestmentCalculator.Resources.Home.TOB</label>
-            <input type="number" step="any" class="input-left" id="PercTOBSell" value="0.35" oninput="CalculateSell()" onkeypress='validate(event)' data-toggle="tooltip" title="@InvestmentCalculator.Resources.Home.TOBTT"/>
+            <input type="number" step="any" class="input-left" id="PercTOBSell" value="0.35" oninput="CalculateSell()" onkeypress='validate(event)' data-toggle="tooltip" title="@InvestmentCalculator.Resources.Home.TOBTT" />
             <input type="text" class="input-right" id="TOBSell" value="0" disabled />
         </div>
         <div class="Zone">
-            <label class="label">@InvestmentCalculator.Resources.Home.Commision</label>
+            <label class="label">@InvestmentCalculator.Resources.Home.Commission</label>
             <input type="text" id="CommissionSell" class="input" value="0" oninput="CalculateSell()" onkeypress='validate(event)' />
         </div>
 
@@ -88,7 +88,7 @@
             <label class="label">@InvestmentCalculator.Resources.Home.FinalResult</label>
             <input type="text" id="Result" class="input" value="0" disabled />
         </div>
-        <div id="SicavTax" >
+        <div id="SicavTax">
             <div class="Zone Tax">
                 <label class="label">@InvestmentCalculator.Resources.Home.Tax</label>
                 <input type="number" step="any" id="PercTax" class="input-left" value="30" onchange="CalculateTax()" onkeypress='validate(event)' />
@@ -102,5 +102,11 @@
         </div>
         <br />
     </div>
+    
 </div>
 
+<div class="row">
+    <div class="col-sm-12 mt-4 text-center">
+        <p style="font-size:10px; font-style:italic;">*This tool has been developed for informational purposes only. The calculations are entirely based on the information you provide, which is your responsibility. The creators are not responsible for the content of the information you receive and cannot guarantee the accuracy or completeness of any information contained in this website. In case of doubt, consult with a financial advisor.</p>
+    </div>
+</div>

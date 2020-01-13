@@ -124,9 +124,9 @@
     <value>Achat</value>
   </data>
   <data name="CapitalGain" xml:space="preserve">
-    <value>Gain de capital</value>
+    <value>Plus-value</value>
   </data>
-  <data name="Commision" xml:space="preserve">
+  <data name="Commission" xml:space="preserve">
     <value>Commission</value>
   </data>
   <data name="FinalResult" xml:space="preserve">
@@ -157,7 +157,7 @@
     <value>Sicav</value>
   </data>
   <data name="Tax" xml:space="preserve">
-    <value>Taxe (%)</value>
+    <value>Impôts (%)</value>
   </data>
   <data name="TOB" xml:space="preserve">
     <value>T.O.B. (%)</value>

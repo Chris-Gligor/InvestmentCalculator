@@ -88,11 +88,11 @@ namespace InvestmentCalculator.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Commision.
+        ///   Looks up a localized string similar to Commission.
         /// </summary>
-        public static string Commision {
+        public static string Commission {
             get {
-                return ResourceManager.GetString("Commision", resourceCulture);
+                return ResourceManager.GetString("Commission", resourceCulture);
             }
         }
         

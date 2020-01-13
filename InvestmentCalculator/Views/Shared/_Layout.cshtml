@@ -20,7 +20,7 @@
     @{ 
         string Language = "en";
         
-        if (Request.QueryString["Language"] != null)
+        if (Request.QueryString["Language"] != null && Request.QueryString["Language"] != "")
         {
             Language = Request.QueryString["Language"].ToString();
         }
@@ -68,10 +68,7 @@
         </main>
     </div>
 
-    <environment include="Development">
-        <script src="~/lib/jquery/dist/jquery.js"></script>
-        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
-    </environment>
+    
     <environment exclude="Development">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
                 asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
@@ -90,4 +87,8 @@
 
     @RenderSection("Scripts", required: false)
 </body>
+
+
 </html>
+
+
